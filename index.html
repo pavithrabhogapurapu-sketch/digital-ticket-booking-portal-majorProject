@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Ticket Booking Portal</title>
+
+<style>
+/* Slate Grey & Purple Corporate Theme */
+
+body{
+    background:#1a1e24;
+    color:#f5f6f8;
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+}
+
+header{
+    background:#111417;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #9c27b0;
+}
+
+.user-tag{
+    background:#9c27b0;
+    color:#fff;
+    padding:6px 15px;
+    border-radius:20px;
+    font-weight:bold;
+    font-size:0.9rem;
+}
+
+.container-box{
+    max-width:700px;
+    margin:40px auto;
+    padding:10px;
+}
+
+h2{
+    color:#9c27b0;
+    text-align:center;
+    font-size:1.8rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.ticket-card{
+    background:#242933;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    border:1px solid #313745;
+}
+
+.movie-title{
+    font-size:1.4rem;
+    color:#fff;
+    margin:0 0 10px;
+}
+
+.meta-info{
+    color:#9aa5b5;
+    margin:4px 0;
+    font-size:0.95rem;
+}
+
+.booking-btn{
+    background:#9c27b0;
+    color:#fff;
+    border:none;
+    padding:12px;
+    width:100%;
+    margin-top:15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+.booking-btn:hover{
+    background:#7b1fa2;
+}
+
+.admin-panel-box{
+    background:#1d1b26;
+    border:2px dashed #9c27b0;
+    padding:25px;
+    border-radius:15px;
+    margin-top:50px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    background:#242933;
+    border:1px solid #313745;
+    color:#fff;
+    border-radius:6px;
+    box-sizing:border-box;
+}
+
+input:focus{
+    border-color:#9c27b0;
+    outline:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div style="font-weight:bold;font-size:1.2rem;">
+        🎬 Cinema Reservation Desk
+    </div>
+
+    <div class="user-tag">
+        BHOGAPURAPU PAVITHRA (BSC CS C)
+    </div>
+</header>
+
+<div class="container-box">
+
+<h2>Available Movie Catalog</h2>
+
+<!-- Movie Card 1 -->
+
+<div class="ticket-card">
+    <h3 class="movie-title">Game Changer (Telugu)</h3>
+
+    <p class="meta-info"><b>Location:</b> Screen 1 Lounge</p>
+
+    <p class="meta-info">
+        <b>Time:</b> 02:30 PM |
+        <b>Tariff:</b> ₹150
+    </p>
+
+    <button class="booking-btn"
+        onclick="alert('Booking Confirmed!\nYour seats for Game Changer are secured successfully.')">
+        Instant Ticket Booking
+    </button>
+</div>
+
+<!-- Movie Card 2 -->
+
+<div class="ticket-card">
+
+    <h3 class="movie-title">Pushpa 2: The Rule</h3>
+
+    <p class="meta-info"><b>Location:</b> Screen 2 IMAX</p>
+
+    <p class="meta-info">
+        <b>Time:</b> 06:00 PM |
+        <b>Tariff:</b> ₹150
+    </p>
+
+    <button class="booking-btn"
+        onclick="alert('Booking Confirmed!\nYour seats for Pushpa 2 are secured successfully.')">
+        Instant Ticket Booking
+    </button>
+
+</div>
+
+<!-- Admin Panel -->
+
+<div class="admin-panel-box">
+
+    <h3 style="color:#9c27b0;margin-top:0;font-size:1.2rem;">
+        🎥 Management Desk - Add Movie Show
+    </h3>
+
+    <input type="text" placeholder="Enter Blockbuster Movie Title">
+
+    <input type="text" placeholder="Auditorium / Screen Assignment">
+
+    <input type="text" placeholder="Show Timing Schedule">
+
+    <button class="booking-btn"
+        style="background:#4caf50;"
+        onclick="alert('Show details synced to MongoDB database successfully!')">
+        Publish to Cinema Database
+    </button>
+
+</div>
+
+</div>
+
+</body>
+</html>
